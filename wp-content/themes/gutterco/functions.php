@@ -56,7 +56,9 @@ add_action('after_setup_theme', 'soggy_bottoms_setup');
  */
 function soggy_bottoms_styles() {
     wp_enqueue_style('soggy-bottoms-style', get_stylesheet_uri(), array(), wp_get_theme()->get('Version'));
+    wp_enqueue_style('main-style', get_stylesheet_directory_uri() . '/style.min.css', array(), filemtime(get_stylesheet_directory() . '/style.min.css'));
 }
+
 
 /* When wp runs wp_enqueue_scripts also run soggy_bottoms_scripts */
 add_action('wp_enqueue_scripts', 'soggy_bottoms_styles');
