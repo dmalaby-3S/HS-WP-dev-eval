@@ -5,7 +5,7 @@ const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
 
 gulp.task('styles', function() {
-    return gulp.src('./scss/style.scss') // Source SCSS file
+    return gulp.src('./assets/scss/style.scss', { allowEmpty: true })
         .pipe(sass().on('error', sass.logError)) // Compile SCSS to CSS
         .pipe(autoprefixer()) // Add vendor prefixes
         .pipe(cleanCSS()) // Minify CSS
