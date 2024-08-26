@@ -35,7 +35,7 @@ services:
       WORDPRESS_DB_PASSWORD: wordpress
       WORDPRESS_DB_NAME: wordpress
       # debug mode (0 = false, 1 = true)
-      WORDPRESS_DEBUG: 0
+      WORDPRESS_DEBUG: 1
     networks:
       - wpsite
 
